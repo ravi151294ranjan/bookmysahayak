@@ -18,12 +18,15 @@ import {
   useColorModeValue,
   Stack,
   Image,
+  Text,
+  Select,
+  Input,
 } from "@chakra-ui/react";
 import { HamburgerIcon, CloseIcon } from "@chakra-ui/icons";
 import TopHeading from "../TopHeading/TopHeading";
 import Login from "../Login/Login";
 import logo from "../Cart/logo.png";
-import sahayak from  "../Cart/6-removebg-preview (2).png"
+import sahayak from  "../Cart/Sahayak.png"
 // const Links = [
 //   "Blog",
 //   "Register As A Professional",
@@ -72,6 +75,43 @@ export default function Navbar() {
                 <Image w={"500%"} h={"90%"} src={sahayak} />
               </HomeLink>
             </Box>
+            {/* <Box gap={5}
+                fontWeight={"bold"}
+                pos={"absolute"}
+                right="80"
+                left="200"
+                top={"0.5"}
+            >
+            <Text className="title" style={{ color: 'black' }}>Service - Simplified!</Text>
+            </Box> */}
+            <Box
+                bg={"whiteAlpha.900"}
+                borderRadius={"8"}
+                w="200px"
+                padding={"220"}
+                color={"blackAlpha.900"}
+                textAlign="left">
+                  <Input
+                    textAlign={"center"}
+                    cursor={"pointer"}
+                    placeholder="Enter Pincode"
+                    width={"15em"}>
+                    </Input>
+            </Box>
+            <Box
+                bg={"whiteAlpha.900"}
+                borderRadius={"20"}
+                w="200px"
+                padding={"50"}
+                color={"blackAlpha.900"}
+                textAlign="right">
+                  <Input
+                    textAlign={"center"}
+                    cursor={"pointer"}
+                    placeholder="Search For Services"
+                    width={"20em"}>
+                    </Input>
+            </Box>
             {/* <HStack
               as={'nav'}
               spacing={4}
@@ -104,11 +144,11 @@ export default function Navbar() {
                 {/* {Links.map((link) => (
                                     <NavLink key={link}>{link}</NavLink>
                                 ))} */}
-                <NavLink>
+                {/* <NavLink>
                   <button onClick={blogClick}>Blog</button>
                 </NavLink>
                 <NavLink>Register As Worker</NavLink>
-                <NavLink>Help Center</NavLink>
+                <NavLink>Help Center</NavLink> */}
                 <NavLink>
                   <button>
                     <Login />
@@ -122,9 +162,9 @@ export default function Navbar() {
         {isOpen ? (
           <Box pb={4} display={{ md: "none" }}>
             <Stack as={"nav"} spacing={4}>
-              <button onClick={blogClick}>Blog</button>
+              {/* <button onClick={blogClick}>Blog</button>
               <button>Register As A Professional</button>
-              <button>Help Center</button>
+              <button>Help Center</button> */}
               <button>
                 <Login />
               </button>
