@@ -137,9 +137,6 @@ const Body_1 = (images) => {
             key={index}
             className={`dot ${currentIndex === index ? "active" : ""}`}
             onClick={() => handleDotClick(index)}
-            initial="initial"
-            animate={currentIndex === index ? "animate" : ""}
-            whileHover="hover"
             variants={dotsVariants}
           ></motion.div>
         ))}
